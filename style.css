@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.welcome {
+  background-image: linear-gradient(#ff5722, #ffc107);
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.welcome h1 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  z-index: 1;
+}
+.square ul li,
+.circle ul li {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #fff;
+  list-style: none;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0;
+}
+.square ul li {
+  top: 50vh;
+  left: 45vw;
+  animation: square 10s linear infinite;
+}
+.square ul li:nth-child(2) {
+  top: 80vh;
+  left: 10vw;
+  animation-delay: 2s;
+}
+.square ul li:nth-child(3) {
+  top: 80vh;
+  left: 85vw;
+  animation-delay: 4s;
+}
+.square ul li:nth-child(4) {
+  top: 10vh;
+  left: 70vw;
+  animation-delay: 6s;
+}
+.square ul li:nth-child(5) {
+  top: 10vh;
+  left: 10vh;
+  animation-delay: 8s;
+}
+
+@keyframes square {
+  0% {
+    transform: scale(0) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4) rotateY(1000deg);
+    opacity: 0;
+  }
+}
+
+.circle ul li {
+  bottom: 0;
+  left: 15vw;
+  animation: circle 10s linear infinite;
+}
+.circle ul li:nth-child(2) {
+  left: 35vw;
+  animation-delay: 2s;
+}
+.circle ul li:nth-child(3) {
+  left: 55vw;
+  animation-delay: 4s;
+}
+.circle ul li:nth-child(4) {
+  left: 75vw;
+  animation-delay: 6s;
+}
+.circle ul li:nth-child(5) {
+  left: 90vw;
+  animation-delay: 8s;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+    bottom: 0;
+    border-radius: 0;
+  }
+  100% {
+    transform: scale(4) rotate(1000deg);
+    opacity: 0;
+    bottom: 90vh;
+    border-radius: 50%;
+  }
+}
